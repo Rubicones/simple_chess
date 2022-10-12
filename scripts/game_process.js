@@ -41,7 +41,20 @@ function switch_sides(){
             let image2 = cell2.firstElementChild;
             let image_src = image.getAttribute("src");
             image.src = image2.getAttribute("src");
-            image2.src = image_src;}}}
+            image2.src = image_src;}}
+}
+
+function twisting_board(){
+    let button = document.querySelector('#twisting');
+    if (SWITCH === 0){
+        button.style.backgroundColor = 'greenyellow';
+        SWITCH++;
+    } else {
+        button.style.backgroundColor = 'orangered';
+        SWITCH--;
+    }
+
+}
 
 let move = new ClickedFigure("", "",
     "00", "", "", "");
@@ -74,18 +87,16 @@ for (let i = 1; i < 9; i++){
                         move.path = "images/invisible_fig.png";
                         TURNS++;
                         move.source_cell = "00";
-                        switch_sides();
-
+                        if (SWITCH === 1){
+                            switch_sides();}
                     }
                     else if (move.team === team){
                         if (cell.getAttribute("cell_number") !== move.source_cell)
                             show_corner_message("You can't eat yourself!", 2000);
-                        move.source_cell = "00";
-                    }
+                        move.source_cell = "00";}
                     move.turn_color_back();}}
             else{
-                show_corner_message("It's not your turn!", 2000);
-            }
+                show_corner_message("It's not your turn!", 2000);}
         })
     }
 }

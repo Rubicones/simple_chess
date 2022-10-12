@@ -22,6 +22,24 @@ article{
     border: black 2px solid;
 }
 
+.buttons_board{
+    display: flex;
+    justify-content: left;
+    width: 70%;
+    height: 3vw;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 1vw;
+}
+
+#twisting{
+    display: inline-block;
+    height: 100%;
+    border: 1px black solid;
+    border-radius: 5px;
+    background-color: greenyellow;
+}
+
 #board{
     margin-top: 5%;
     width: 60%;
