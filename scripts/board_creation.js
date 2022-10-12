@@ -7,7 +7,7 @@ let TURNS = 0;
 let SWITCH = 1;
 
 for (let i = 1; i < 9; i++){
-    for (let j = 0; j < 8; j++){
+    for (let j = 1; j < 9; j++){
         let cell = table.rows[i].cells[j];
         if ((i + j) % 2 === 0){
             cell.style.backgroundColor = "lightgreen";}
@@ -50,38 +50,38 @@ function current_figure_name(element){
 for (let elem of document.querySelectorAll('[cell_number]')){
     let index = elem.getAttribute("cell_number");
     let image = elem.firstElementChild;
-    if (Number(index) < 28){
+    if (Number(index) < 29){
         switch (index){
+            case "18":
+            case "11": image.src = "images/black_rook.png";
+                break
             case "17":
-            case "10": image.src = "images/black_rook.png";
+            case "12": image.src = "images/black_knight.png";
                 break
             case "16":
-            case "11": image.src = "images/black_knight.png";
+            case "13": image.src = "images/black_bishop.png";
                 break
-            case "15":
-            case "12": image.src = "images/black_bishop.png";
+            case "14": image.src = "images/black_king.png";
                 break
-            case "13": image.src = "images/black_king.png";
-                break
-            case "14": image.src = "images/black_queen.png";
+            case "15": image.src = "images/black_queen.png";
                 break
             default: image.src = "images/black_pawn.png";
         }
     }
-    if (Number(index) > 69){
+    if (Number(index) > 70){
         switch (index){
+            case "88":
+            case "81": image.src = "images/white_rook.png";
+                break
             case "87":
-            case "80": image.src = "images/white_rook.png";
+            case "82": image.src = "images/white_knight.png";
                 break
             case "86":
-            case "81": image.src = "images/white_knight.png";
+            case "83": image.src = "images/white_bishop.png";
                 break
-            case "85":
-            case "82": image.src = "images/white_bishop.png";
+            case "84": image.src = "images/white_king.png";
                 break
-            case "83": image.src = "images/white_king.png";
-                break
-            case "84": image.src = "images/white_queen.png";
+            case "85": image.src = "images/white_queen.png";
                 break
             default: image.src = "images/white_pawn.png";
         }

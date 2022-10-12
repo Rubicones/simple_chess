@@ -82,7 +82,9 @@ img{
         width: 100%;
     }
 }
-
+.numbers_right, .numbers_left{
+    font-size: 2.5vw;
+}
 .alert{
     text-align: center;
     font-size: 1.2vw;

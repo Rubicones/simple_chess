@@ -32,16 +32,20 @@ let board = document.querySelector("#board_table");
 
 function switch_sides(){
     for (let i = 1; i < 5; i++){
-        for (let j = 0; j < 8; j++) {
+        for (let j = 1; j < 9; j++) {
             let cell = document.querySelector('[cell_number="'
                 + String(i) + String(j) + '"]');
             let cell2 = document.querySelector('[cell_number="'
-                + String(9 - i) + String(7 - j) + '"]');
+                + String(9 - i) + String(9 - j) + '"]');
             let image = cell.firstElementChild;
             let image2 = cell2.firstElementChild;
             let image_src = image.getAttribute("src");
             image.src = image2.getAttribute("src");
             image2.src = image_src;}}
+    for (let number of document.querySelectorAll(".numbers_left, .numbers_right")){
+            number.textContent = 9 - (+number.textContent);
+    }
+
 }
 
 function twisting_board(){
@@ -59,7 +63,7 @@ function twisting_board(){
 let move = new ClickedFigure("", "",
     "00", "", "", "");
 for (let i = 1; i < 9; i++){
-    for (let j = 0; j < 8; j++) {
+    for (let j = 1; j < 9; j++) {
         let cell = board.rows[i].cells[j];
         cell.addEventListener("click", function(event){
             let team = current_figure_team(cell);
