@@ -45,7 +45,6 @@ function switch_sides(){
     for (let number of document.querySelectorAll(".numbers_left, .numbers_right")){
             number.textContent = 9 - (+number.textContent);
     }
-
 }
 
 function twisting_board(){
@@ -57,7 +56,12 @@ function twisting_board(){
         button.style.backgroundColor = 'orangered';
         SWITCH--;
     }
+}
 
+function restart(){
+    if (confirm("Are you sure?")){
+        set_chess();
+        TURNS = 0;}
 }
 
 let move = new ClickedFigure("", "",

@@ -47,45 +47,50 @@ function current_figure_name(element){
     return(figure);
 }
 
-for (let elem of document.querySelectorAll('[cell_number]')){
-    let index = elem.getAttribute("cell_number");
-    let image = elem.firstElementChild;
-    if (Number(index) < 29){
-        switch (index){
-            case "18":
-            case "11": image.src = "images/black_rook.png";
-                break
-            case "17":
-            case "12": image.src = "images/black_knight.png";
-                break
-            case "16":
-            case "13": image.src = "images/black_bishop.png";
-                break
-            case "14": image.src = "images/black_king.png";
-                break
-            case "15": image.src = "images/black_queen.png";
-                break
-            default: image.src = "images/black_pawn.png";
+function set_chess(){
+    for (let elem of document.querySelectorAll('[cell_number]')){
+        let index = elem.getAttribute("cell_number");
+        let image = elem.firstElementChild;
+        image.src = "images/invisible_fig.png";
+        if (Number(index) < 29){
+            switch (index){
+                case "18":
+                case "11": image.src = "images/black_rook.png";
+                    break
+                case "17":
+                case "12": image.src = "images/black_knight.png";
+                    break
+                case "16":
+                case "13": image.src = "images/black_bishop.png";
+                    break
+                case "14": image.src = "images/black_king.png";
+                    break
+                case "15": image.src = "images/black_queen.png";
+                    break
+                default: image.src = "images/black_pawn.png";
+            }
         }
-    }
-    if (Number(index) > 70){
-        switch (index){
-            case "88":
-            case "81": image.src = "images/white_rook.png";
-                break
-            case "87":
-            case "82": image.src = "images/white_knight.png";
-                break
-            case "86":
-            case "83": image.src = "images/white_bishop.png";
-                break
-            case "84": image.src = "images/white_king.png";
-                break
-            case "85": image.src = "images/white_queen.png";
-                break
-            default: image.src = "images/white_pawn.png";
+        if (Number(index) > 70){
+            switch (index){
+                case "88":
+                case "81": image.src = "images/white_rook.png";
+                    break
+                case "87":
+                case "82": image.src = "images/white_knight.png";
+                    break
+                case "86":
+                case "83": image.src = "images/white_bishop.png";
+                    break
+                case "84": image.src = "images/white_king.png";
+                    break
+                case "85": image.src = "images/white_queen.png";
+                    break
+                default: image.src = "images/white_pawn.png";
+            }
         }
     }
 }
+
+set_chess();
 
 //current_figure(document.querySelector("[cell_number]"));
