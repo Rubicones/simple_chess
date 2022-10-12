@@ -5,7 +5,8 @@ class ClickedFigure{
     path = "";
     element = "";
     bg_color = "";
-    constructor(team, figure, source_cell, path, element, bg_color) {
+    constructor(team, figure, source_cell, path,
+                element, bg_color) {
         this.figure = figure;
         this.team = team;
         this.source_cell = source_cell;
@@ -20,33 +21,30 @@ class ClickedFigure{
 function show_corner_message(message, time){
     let alert_div = document.createElement('p');
     alert_div.innerHTML = message;
-    document.querySelector(".alert").style.display = "block";
+    document.querySelector(".alert").style
+        .display = "block";
     document.querySelector(".alert").append(alert_div);
     setTimeout(() =>
             document.querySelector(".alert").style.display = "none", time);
+    setTimeout(() => alert_div.remove(), time);
 }
 let board = document.querySelector("#board_table");
 
-// function switch_sides(){
-//     for (let i = 1; i < 5; i++){
-//         for (let j = 0; j < 8; j++) {
-//             let i2 = 9 - i;
-//             let j2 = 7 - j;
-//             i2 = String(i2) + String(j2);
-//             let cell = document.querySelector('[cell_number="' + String(i) + String(j) + '"]');
-//             let cell2 = document.querySelector('[cell_number="' + String(i2) + String(j2) + '"]');
-//             // let image = cell.firstElementChild;
-//             // let image2 = cell2.firstElementChild;
-//             // image_src = image.getAttribute("src");
-//             // image.src = image2.getAttribute("src");
-//             // image2.src = image_src;
-//             let temp = cell.innerHTML;
-//             cell.innerHTML = cell2.innerHTML;
-//             cell.innerHTML = temp;
-//
-//         }}}
+function switch_sides(){
+    for (let i = 1; i < 5; i++){
+        for (let j = 0; j < 8; j++) {
+            let cell = document.querySelector('[cell_number="'
+                + String(i) + String(j) + '"]');
+            let cell2 = document.querySelector('[cell_number="'
+                + String(9 - i) + String(7 - j) + '"]');
+            let image = cell.firstElementChild;
+            let image2 = cell2.firstElementChild;
+            let image_src = image.getAttribute("src");
+            image.src = image2.getAttribute("src");
+            image2.src = image_src;}}}
 
-let move = new ClickedFigure("", "", "00", "", "", "");
+let move = new ClickedFigure("", "",
+    "00", "", "", "");
 for (let i = 1; i < 9; i++){
     for (let j = 0; j < 8; j++) {
         let cell = board.rows[i].cells[j];
@@ -76,6 +74,8 @@ for (let i = 1; i < 9; i++){
                         move.path = "images/invisible_fig.png";
                         TURNS++;
                         move.source_cell = "00";
+                        switch_sides();
+
                     }
                     else if (move.team === team){
                         if (cell.getAttribute("cell_number") !== move.source_cell)

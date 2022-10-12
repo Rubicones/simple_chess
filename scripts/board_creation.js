@@ -26,20 +26,23 @@ for (let i = 1; i < 9; i++){
 }
 
 function current_figure(element){
-    let figure = element.firstElementChild.getAttribute("src");
+    let figure = element.firstElementChild
+        .getAttribute("src");
     figure = figure.slice(7, 17);
     return(figure);
 }
 
 function current_figure_team(element){
-    let figure = element.firstElementChild.getAttribute("src");
+    let figure = element.firstElementChild
+        .getAttribute("src");
     figure = figure.slice(7, 8);
     return(figure);
 }
 
 
 function current_figure_name(element){
-    let figure = element.firstElementChild.getAttribute("src");
+    let figure = element.firstElementChild
+        .getAttribute("src");
     figure = figure.slice(13, 14);
     return(figure);
 }
