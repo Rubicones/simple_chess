@@ -17,6 +17,14 @@ class ClickedFigure{
         this.element.style.backgroundColor = this.bg_color;}
 }
 
+function show_corner_message(message, time){
+    let alert_div = document.createElement('p');
+    alert_div.innerHTML = message;
+    document.querySelector(".alert").style.display = "block";
+    document.querySelector(".alert").append(alert_div);
+    setTimeout(() =>
+            document.querySelector(".alert").style.display = "none", time);
+}
 let board = document.querySelector("#board_table");
 
 // function switch_sides(){
@@ -68,15 +76,16 @@ for (let i = 1; i < 9; i++){
                         move.path = "images/invisible_fig.png";
                         TURNS++;
                         move.source_cell = "00";
-
                     }
                     else if (move.team === team){
-                        alert("You can't eat yourself!");
+                        if (cell.getAttribute("cell_number") !== move.source_cell)
+                            show_corner_message("You can't eat yourself!", 2000);
                         move.source_cell = "00";
                     }
                     move.turn_color_back();}}
             else{
-                alert("This is not your turn!")}
+                show_corner_message("It's not your turn!", 2000);
+            }
         })
     }
 }

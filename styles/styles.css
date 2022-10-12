@@ -64,3 +64,18 @@ img{
         width: 100%;
     }
 }
+
+.alert{
+    text-align: center;
+    font-size: 1.2vw;
+    border: #0e940a 2px solid;
+    background-color: rgba(23, 255, 18, 0.56);
+    border-radius: 1vw;
+    position: fixed;
+    width: 10vw;
+    height: 5vw;
+    top: auto;
+    bottom: 3%;
+    display: none;
+    overflow: hidden;
+}
