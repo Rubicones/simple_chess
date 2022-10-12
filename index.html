@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chess</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+<header>
+    <h1>The Chess</h1>
+    <h3>Rubicon's web realization</h3>
+</header>
+
+<section id="rules">
+    <h6 style="margin: 0">Rules</h6>
+    <article>
+        <p>1. This game lets you do every move whatever you want. Don't cheat! </p>
+        <p>2. Have fun!</p>
+    </article>
+</section>
+
+<section>
+    <div id="board">
+        <table id="board_table">
+            <tr><td><span class="letters_above" id="above_A">A</span></td>
+                <td><span class="letters_above" id="above_B">B</span></td>
+                <td><span class="letters_above" id="above_C">C</span></td>
+                <td><span class="letters_above" id="above_D">D</span></td>
+                <td><span class="letters_above" id="above_E">E</span></td>
+                <td><span class="letters_above" id="above_F">F</span></td>
+                <td><span class="letters_above" id="above_G">G</span></td>
+                <td><span class="letters_above" id="above_H">H</span></td>
+            </tr>
+            <tr>
+                <td><img src="images/invisible_fig.png" alt="black_pawn"></td>
+                <td><img src="images/invisible_fig.png" alt="black_pawn"></td>
+                <td><img src="images/invisible_fig.png" alt="black_pawn"></td>
+                <td><img src="images/invisible_fig.png" alt="black_pawn"></td>
+                <td><img src="images/invisible_fig.png" alt="black_pawn"></td>
+                <td><img src="images/invisible_fig.png" alt="black_pawn"></td>
+                <td><img src="images/invisible_fig.png" alt="black_pawn"></td>
+                <td><img src="images/invisible_fig.png" alt="black_pawn"></td>
+            </tr>
+            <tr>
+                <td><img src="images/invisible_fig.png" alt="black_pawn"></td>
+                <td><img src="images/invisible_fig.png" alt="black_pawn"></td>
+                <td><img src="images/invisible_fig.png" alt="black_pawn"></td>
+                <td><img src="images/invisible_fig.png" alt="black_pawn"></td>
+                <td><img src="images/invisible_fig.png" alt="black_pawn"></td>
+                <td><img src="images/invisible_fig.png" alt="black_pawn"></td>
+                <td><img src="images/invisible_fig.png" alt="black_pawn"></td>
+                <td><img src="images/invisible_fig.png" alt="black_pawn"></td>
+            </tr>
+            <tr>
+                <td><img src="images/invisible_fig.png" alt="black_pawn"></td>
+                <td><img src="images/invisible_fig.png" alt="black_pawn"></td>
+                <td><img src="images/invisible_fig.png" alt="black_pawn"></td>
+                <td><img src="images/invisible_fig.png" alt="black_pawn"></td>
+                <td><img src="images/invisible_fig.png" alt="black_pawn"></td>
+                <td><img src="images/invisible_fig.png" alt="black_pawn"></td>
+                <td><img src="images/invisible_fig.png" alt="black_pawn"></td>
+                <td><img src="images/invisible_fig.png" alt="black_pawn"></td>
+            </tr>
+            <tr>
+                <td><img src="images/invisible_fig.png" alt="black_pawn"></td>
+                <td><img src="images/invisible_fig.png" alt="black_pawn"></td>
+                <td><img src="images/invisible_fig.png" alt="black_pawn"></td>
+                <td><img src="images/invisible_fig.png" alt="black_pawn"></td>
+                <td><img src="images/invisible_fig.png" alt="black_pawn"></td>
+                <td><img src="images/invisible_fig.png" alt="black_pawn"></td>
+                <td><img src="images/invisible_fig.png" alt="black_pawn"></td>
+                <td><img src="images/invisible_fig.png" alt="black_pawn"></td>
+            </tr>
+            <tr>
+                <td><img src="images/invisible_fig.png" alt="black_pawn"></td>
+                <td><img src="images/invisible_fig.png" alt="black_pawn"></td>
+                <td><img src="images/invisible_fig.png" alt="black_pawn"></td>
+                <td><img src="images/invisible_fig.png" alt="black_pawn"></td>
+                <td><img src="images/invisible_fig.png" alt="black_pawn"></td>
+                <td><img src="images/invisible_fig.png" alt="black_pawn"></td>
+                <td><img src="images/invisible_fig.png" alt="black_pawn"></td>
+                <td><img src="images/invisible_fig.png" alt="black_pawn"></td>
+            </tr>
+            <tr>
+                <td><img src="images/invisible_fig.png" alt="black_pawn"></td>
+                <td><img src="images/invisible_fig.png" alt="black_pawn"></td>
+                <td><img src="images/invisible_fig.png" alt="black_pawn"></td>
+                <td><img src="images/invisible_fig.png" alt="black_pawn"></td>
+                <td><img src="images/invisible_fig.png" alt="black_pawn"></td>
+                <td><img src="images/invisible_fig.png" alt="black_pawn"></td>
+                <td><img src="images/invisible_fig.png" alt="black_pawn"></td>
+                <td><img src="images/invisible_fig.png" alt="black_pawn"></td>
+            </tr>
+            <tr>
+                <td><img src="images/invisible_fig.png" alt="black_pawn"></td>
+                <td><img src="images/invisible_fig.png" alt="black_pawn"></td>
+                <td><img src="images/invisible_fig.png" alt="black_pawn"></td>
+                <td><img src="images/invisible_fig.png" alt="black_pawn"></td>
+                <td><img src="images/invisible_fig.png" alt="black_pawn"></td>
+                <td><img src="images/invisible_fig.png" alt="black_pawn"></td>
+                <td><img src="images/invisible_fig.png" alt="black_pawn"></td>
+                <td><img src="images/invisible_fig.png" alt="black_pawn"></td>
+            </tr>
+            <tr>
+                <td><img src="images/invisible_fig.png" alt="black_pawn"></td>
+                <td><img src="images/invisible_fig.png" alt="black_pawn"></td>
+                <td><img src="images/invisible_fig.png" alt="black_pawn"></td>
+                <td><img src="images/invisible_fig.png" alt="black_pawn"></td>
+                <td><img src="images/invisible_fig.png" alt="black_pawn"></td>
+                <td><img src="images/invisible_fig.png" alt="black_pawn"></td>
+                <td><img src="images/invisible_fig.png" alt="black_pawn"></td>
+                <td><img src="images/invisible_fig.png" alt="black_pawn"></td>
+            </tr>
+            <tr>
+                <td><span class="letters_buttom" id="bot_A">A</span></td>
+                <td><span class="letters_buttom" id="bot_B">B</span></td>
+                <td><span class="letters_buttom" id="bot_C">C</span></td>
+                <td><span class="letters_buttom" id="bot_D">D</span></td>
+                <td><span class="letters_buttom" id="bot_E">E</span></td>
+                <td><span class="letters_buttom" id="bot_F">F</span></td>
+                <td><span class="letters_buttom" id="bot_G">G</span></td>
+                <td><span class="letters_buttom" id="bot_H">H</span></td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+
+
+<script src="scripts/board_creation.js"></script>
+<script src="scripts/game_process.js"></script>
+
+</body>
+</html>
